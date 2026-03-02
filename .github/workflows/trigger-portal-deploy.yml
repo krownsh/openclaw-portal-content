@@ -1,0 +1,20 @@
+name: Trigger portal deploy (Cloudflare Pages hook)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Cloudflare Pages deploy hook
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.CLOUDFLARE_PORTAL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK_URL" ]; then
+            echo "Missing secret: CLOUDFLARE_PORTAL_DEPLOY_HOOK_URL" >&2
+            exit 1
+          fi
+          curl -fsSL -X POST "$DEPLOY_HOOK_URL"
+          echo "Deploy hook triggered."
