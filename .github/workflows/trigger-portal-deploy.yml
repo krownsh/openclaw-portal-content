@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Call Cloudflare Pages deploy hook
         env:
-          DEPLOY_HOOK_URL: ${{ secrets.CLOUDFLARE_PORTAL_DEPLOY_HOOK_URL }}
+          DEPLOY_HOOK_URL: ${{ secrets.CLOUDFLAREPORTALDEPLOYHOOKURL }}
         run: |
           if [ -z "$DEPLOY_HOOK_URL" ]; then
             echo "Missing secret: CLOUDFLARE_PORTAL_DEPLOY_HOOK_URL" >&2
