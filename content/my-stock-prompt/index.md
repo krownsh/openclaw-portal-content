@@ -9,4 +9,7 @@ title: "My Stock Prompt"
 - B（大事件/風險情境推演）
   - /tasks/my-stock-prompt/b-event-risk-scenario-signals-prompt
 
+- C（個股研究 Memo）
+  - /tasks/my-stock-prompt/c-equity-research-memo-prompt
+
 （歷史版本：仍保留在 /tasks/my-stock-prompt/YYYY-MM-DD）
