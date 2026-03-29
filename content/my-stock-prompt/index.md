@@ -12,4 +12,7 @@ title: "My Stock Prompt"
 - C（個股研究 Memo）
   - /tasks/my-stock-prompt/c-equity-research-memo-prompt
 
+- D（交易決策輔助：條件式交易計畫）
+  - /tasks/my-stock-prompt/d-trade-plan-conditions-prompt
+
 （歷史版本：仍保留在 /tasks/my-stock-prompt/YYYY-MM-DD）
